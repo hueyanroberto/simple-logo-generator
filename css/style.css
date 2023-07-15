@@ -34,18 +34,19 @@
 .canvas .generated-text {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 80%;
     z-index: 1;
 }
 
 #logo-canvas {
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     background-color: transparent;
 }
 
 .logo-result {
     display: inline-block;
+    height: fit-content;
     /* position: absolute; */
     cursor: pointer;
     font-weight: 800;

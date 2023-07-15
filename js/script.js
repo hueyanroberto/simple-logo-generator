@@ -28,7 +28,7 @@ $('#logo-text').keyup(function () {
 });
 
 $('#button-save').click(function () {
-    html2canvas(document.querySelector("#logo-canvas")).then(canvas => {
+    html2canvas(document.querySelector("#generated-text")).then(canvas => {
         let imageDataUrl = canvas.toDataURL('image/jpg');
         let imageContainer = document.getElementById("image-download");
 
