@@ -54,6 +54,7 @@ function changeLogo(text, size, color) {
 function dragElement(element) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     element.onmousedown = dragMouseDown;
+    element.ontouchstart = dragTouchStart;
 
     function dragMouseDown(event) {
         event.preventDefault();
@@ -74,5 +75,29 @@ function dragElement(element) {
     function dragMouseUp() {
         document.onmouseup = null;
         document.onmousemove = null;
+    }
+
+    function dragTouchStart(event) {
+        event.preventDefault();
+        let touch = event.touches[0];
+        pos3 = touch.clientX - pos1;
+        pos4 = touch.clientY - pos2;
+
+        document.ontouchmove = dragTouchMove;
+        document.ontouchend = dragTouchEnd;
+    }
+
+    function dragTouchMove(event) {
+        event.preventDefault();
+        let touch = event.touches[0];
+        pos1 = touch.clientX - pos3;
+        pos2 = touch.clientY - pos4;
+        element.style.transform = `translate3d(${pos1}px, ${pos2}px, 0)`;
+    }
+
+    function dragTouchEnd() {
+
+        document.ontouchmove = null;
+        document.ontouchend = null;
     }
 }
