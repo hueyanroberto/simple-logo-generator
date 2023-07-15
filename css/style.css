@@ -1,0 +1,143 @@
+* {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+.my-navbar {
+    background-color: darkslateblue!important;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.my-container {
+    width: 600px;
+    max-width: 100%;
+}
+
+.canvas {
+    background-color:#FFDBE9;
+    width: 100%;
+    height: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.canvas p {
+    position: absolute;
+    text-align: center;
+    color: cornflowerblue;
+    z-index: 0;
+    margin-top: 15px;
+}
+
+.canvas .generated-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#logo-canvas {
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.logo-result {
+    display: inline-block;
+    /* position: absolute; */
+    cursor: pointer;
+    font-weight: 800;
+    touch-action: none;
+}
+
+.canvas-control {
+    width: 300px;
+    max-width: 90%;
+}
+
+.my-textbox {
+    width: 100%;
+    height: 35px;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.loading-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50px;
+    right: 12px;
+    z-index: 1;
+}
+
+.size-control-title {
+    flex: 1;
+}
+
+.size-control {
+    flex: 4;
+}
+
+.size-control-text {
+    flex: 1;
+    text-align: end;
+}
+
+.color-select {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.color-select.active {
+    border: 5px solid green;
+}
+
+.color-select#red {
+    background-color: coral;
+}
+
+.color-select#blue {
+    background-color: cornflowerblue;
+}
+
+.color-select#yellow {
+    background-color: khaki;
+}
+
+.color-select#grey {
+    background-color: darkgrey;
+}
+
+.color-select#light-grey {
+    background-color: lightgray;
+}
+
+#button-save {
+    display: inline-block;
+    background-color: darkgray;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 4px solid grey;
+    transition: .15s all;
+}
+
+#button-save:hover {
+    background-color: lightgray;
+}
+
+#button-save:active {
+    background-color: gray;
+}
+
+#image-download img {
+    width: 100%;
+}

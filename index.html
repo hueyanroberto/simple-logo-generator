@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Simple Logo Generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar my-navbar">
+        <div class="container">
+            <span class="mx-auto">
+                Super Simple Logo Maker 👩‍🎨
+            </span>
+        </div>
+    </nav>
+
+    <main class="my-container mx-auto mt-3">
+        <div class="canvas">
+            <p>*The letters are draggable</p>
+            <div class="generated-text d-flex justify-content-center align-items-center" id="generated-text">
+                <div id="logo-canvas" class="d-flex justify-content-center align-items-center"> </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div class="canvas-control">
+                <div class="position-relative d-flex align-items-center" style="height: 30px;">
+                    <input type="text" class="my-textbox position-absolute" id="logo-text" value="Hello World!">
+                    <!-- <div class="position-absolute loading-bullet"></div> -->
+                </div>
+
+                <div class="mt-4 d-flex align-items-center justify-content-between">
+                    <div class="size-control-title">Size: </div>
+                    <input class="size-control" type="range" min="8" max="72" value="26" id="logo-size">
+                    <div class="size-control-text" id="logo-size-text">26px</div>
+                </div>
+
+                <div class="mt-4 d-flex justify-content-evenly" id="color-control">
+                    <div class="color-select active" id="red" color="coral"></div>
+                    <div class="color-select" id="blue" color="cornflowerblue"></div>
+                    <div class="color-select" id="yellow" color="khaki"></div>
+                    <div class="color-select" id="grey" color="darkgrey"></div>
+                    <div class="color-select" id="light-grey" color="lightgrey"></div>
+                </div>
+
+                <div class="mt-4 d-flex justify-content-center">
+                    <button id="button-save" data-bs-toggle="modal" data-bs-target="#modalDownload"><i class="bi bi-download"></i> &nbsp;Save</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalDownload" tabindex="-1" aria-labelledby="modalDownloadLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalDownloadLabel">Download Logo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-10" id="image-download"></div>
+                    </div>
+                </div>
+                <div class="modal-footer d-block">
+                    <p style="text-align: center;">Right click and choose save image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
